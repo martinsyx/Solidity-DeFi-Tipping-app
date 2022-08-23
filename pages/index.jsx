@@ -174,35 +174,35 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Buy martin a Coffee!
+          生日快乐！
         </h1>
-
+        <Image width="302px" height="403px" src="/imgs/2314.jpg" alt="me" />
         {currentAccount ? (
           <div>
             <form>
               <div>
                 <label>
-                  Name
+                  名字
                 </label>
                 <br />
 
                 <input
                   id="name"
                   type="text"
-                  placeholder="anon"
+                  placeholder="你的名字"
                   onChange={onNameChange}
                 />
               </div>
               <br />
               <div>
                 <label>
-                  Send martin a message
+                  送上祝福
                 </label>
                 <br />
 
                 <textarea
                   rows={3}
-                  placeholder="Enjoy your coffee!"
+                  placeholder="请输入你的祝福"
                   id="message"
                   onChange={onMessageChange}
                   required
@@ -212,15 +212,16 @@ export default function Home() {
               <div>
                 <button
                   type="button"
+                  style={{margin:"10px"}}
                   onClick={buyCoffee}
                 >
-                  Send 1 Coffee for 0.001ETH
+                  送上0.001个以太
                 </button>
               </div>
             </form>
           </div>
         ) : (
-            <button onClick={connectWallet}> Connect your wallet </button>
+            <button style={{padding:"10px"}} onClick={connectWallet}> Connect your wallet </button>
           )}
       </main>
 
@@ -241,7 +242,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Created by @thatguyintech for Alchemy's Road to Web3 lesson two!
+          宋思诚三岁生日纪念网站。
         </a>
       </footer>
     </div>
